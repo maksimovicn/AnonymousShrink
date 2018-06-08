@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "985944925168",
+    "firebase_url": "https://anonymous-shrink.firebaseio.com",
+    "project_id": "anonymous-shrink",
+    "storage_bucket": "anonymous-shrink.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985944925168:android:09a6b7176ae5a63a",
+        "android_client_info": {
+          "package_name": "com.project.anonymousshrink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985944925168-btenkau96fj8kc47ql5on18bsdo9nahi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.anonymousshrink",
+            "certificate_hash": "fc690199bd6d944038917c9929259108884f75f4"
+          }
+        },
+        {
+          "client_id": "985944925168-jijpg94062bdkp7c2fepc1r7phq6abvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9ZsEHUQksTgk6o3RMJD7hZxI7L4AlzZU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985944925168-jijpg94062bdkp7c2fepc1r7phq6abvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

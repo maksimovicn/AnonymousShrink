@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp"
+    android:gravity="center"
+    tools:context="com.project.anonymousshrink.Activities.Welcome">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginBottom="20dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"/>
+
+        <Button
+            android:id="@+id/btnLoginScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_login"
+            android:elevation="5dp"
+            android:text="Log In"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnGuestScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_login"
+            android:elevation="5dp"
+            android:text="Guest Access"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>

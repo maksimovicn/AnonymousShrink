@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Anonymous Shrink</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="terms">When registering, you accept the<u> Terms and Conditions </u> and <u>Privacy Policy</u>.</string>
+    <string name="emailHint">Enter your email address</string>
+    <string name="btnForgot">Reset password</string>
+
+    <string name="f_name">First Name</string>
+    <string name="l_name">Last Name</string>
+    <string name="contactNubmer">Contact Number</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="dob">Date of Birth</string>
+    <string name="driving_license">Have you had a full UK driving license for more than 2 years?</string>
+    <string name="license_num">Driving License Serial number</string>
+    <string name="issue_date">Issue Date</string>
+    <string name="criminal_conviction">Have you got any motoring-related criminal convictions?</string>
+    <string name="postal">Postal Code</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="helpandsupport"><![CDATA[Help & Support]]></string>
+    <string name="app_title">DriveIt\u00AE</string>
+    <string name="footer_text">Copy Rights 2018 \u00A9 </string>
+
+
+    <string-array name="nav_item_activity_title">
+        <item>Home</item>
+        <item>Post Question</item>
+        <item>Search Questions</item>
+        <item>Posted Questions</item>
+        <item>Profile Info</item>
+    </string-array>
+
+    <string-array name="visibility_array">
+        <item>Select visibility</item>
+        <item>All</item>
+        <item>Regular Users</item>
+        <item>Psychologist</item>
+    </string-array>
+</resources>
