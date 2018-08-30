@@ -89,7 +89,8 @@ public class DashboardRegular extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        userReference = firebaseDatabase.getReference("Users").child(auth.getCurrentUser().getUid());
+//        userReference = firebaseDatabase.getReference("Users").child(auth.getCurrentUser().getUid());
+        userReference = firebaseDatabase.getReference("Users").child("QAN1SHPGPaX5vPur44fhuZiXmnW2");
 
 
         setSupportActionBar(toolbar);
@@ -108,6 +109,10 @@ public class DashboardRegular extends AppCompatActivity {
         userReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+//                User user = null;
+//                for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
+//                    user = childSnapshot.getValue(User.class);
+//                }
                 User user = dataSnapshot.getValue(User.class);
                 tvNavName.setText(user.getF_name() + " " + user.getL_name());
                 tvNavEmail.setText(user.getEmail());
