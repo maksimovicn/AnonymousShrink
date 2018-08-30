@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -110,26 +111,41 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         } else {
 
             progressDialog.show();
-            auth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
+            try {
+//                final Task<AuthResult> temp = auth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString());
 
-                        progressDialog.dismiss();
-                        startActivity(new Intent(Login.this, DashboardRegular.class));
-                        finish();
+                auth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString())
+                    .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
 
-                    } else {
-                        progressDialog.dismiss();
-                        alertDialog.setTitle("Operation Failed")
-                                .setMessage("The email address or password you have entered is invalid.")
-                                .setIcon(getResources().getDrawable(R.drawable.ic_warning_black_24dp))
-                                .setPositiveButton("Retry", null)
-                                .show();
+                            FirebaseUser user = auth.getCurrentUser();
+                            progressDialog.dismiss();
+                            startActivity(new Intent(Login.this, DashboardRegular.class));
+                            finish();
 
+                        } else {
+                            progressDialog.dismiss();
+                            alertDialog.setTitle("Operation Failed")
+                                    .setMessage("The email address or password you have entered is invalid.")
+                                    .setIcon(getResources().getDrawable(R.drawable.ic_warning_black_24dp))
+                                    .setPositiveButton("Retry", null)
+                                    .show();
+
+                        }
                     }
-                }
-            });
+                }).addOnFailureListener(this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        System.out.println("s");
+                    }
+                });
+
+
+            } catch(Exception e) {
+                System.out.println(e);
+            }
         }
     }
 
